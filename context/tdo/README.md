@@ -1,6 +1,6 @@
 # TDO Jewelry JSON-LD Context
 
-This directory contains a JSON-LD context definition for **Technical Data Objects (TDO)** specific to jewelry and precious metals products. The context extends standard vocabularies (Schema.org and GS1) with domain-specific properties that are not covered by existing standards.
+This directory contains a JSON-LD context definition for **Tortuga de Oro (TDO)** specific to jewelry and precious metals products. The context extends standard vocabularies (Schema.org and GS1) with domain-specific properties that are not covered by existing standards.
 
 ## Files in this Directory
 
