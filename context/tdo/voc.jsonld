@@ -1,0 +1,505 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "https://schema.org/",
+    "gs1": "https://gs1.org/voc/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "tdo": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#"
+  },
+  "@graph": [
+    {
+      "@id": "tdo:innerDiameter",
+      "@type": "rdf:Property",
+      "rdfs:label": "innerDiameter",
+      "rdfs:comment": "Inner diameter of the ring (Durchmesser innen). Typically measured in millimeters.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        },
+        {
+          "@id": "schema:Offer"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantityValue"
+        },
+        {
+          "@id": "schema:Distance"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:fineness",
+      "@type": "rdf:Property",
+      "rdfs:label": "fineness",
+      "rdfs:comment": "Millesimal fineness of precious metal expressed as parts per 1000 (e.g., 585 for 14k gold, 750 for 18k gold). This is the standard hallmarking system used in European countries per hallmarking conventions. Can be specified as an integer value or as a reference to a GoldFineness enumeration value.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        },
+        {
+          "@id": "xsd:integer"
+        },
+        {
+          "@id": "tdo:GoldFineness"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:goldContentPercentage",
+      "@type": "rdf:Property",
+      "rdfs:label": "goldContentPercentage",
+      "rdfs:comment": "Percentage of gold content in the product (e.g., 58.5 for 585/1000 fineness). Expressed as a decimal number.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "xsd:decimal"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:goldContentWeight",
+      "@type": "rdf:Property",
+      "rdfs:label": "goldContentWeight",
+      "rdfs:comment": "Absolute weight of gold content in the item. Useful for calculating the gold value of the product.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantityValue"
+        },
+        {
+          "@id": "schema:Mass"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:goldContent",
+      "@type": "rdf:Property",
+      "rdfs:label": "goldContent",
+      "rdfs:comment": "Structured information about gold content including percentage and weight. Can be expressed as a StructuredValue containing goldContentPercentage and goldContentWeight.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:StructuredValue"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:insideFeatures",
+      "@type": "rdf:Property",
+      "rdfs:label": "insideFeatures",
+      "rdfs:comment": "Features, markings, engravings, or stamps on the inside of the jewelry item (German: Merkmale Innenseite). Free-text description of all inside features.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:insideMarkings",
+      "@type": "rdf:Property",
+      "rdfs:label": "insideMarkings",
+      "rdfs:comment": "Structured list of markings, stamps, engravings, or logos on the inside of the jewelry item. Each marking should be described with its type and content.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:StructuredValue"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:marking",
+      "@type": "rdf:Property",
+      "rdfs:label": "marking",
+      "rdfs:comment": "Content or description of an individual marking, stamp, or engraving on a jewelry item.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:StructuredValue"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:markingType",
+      "@type": "rdf:Property",
+      "rdfs:label": "markingType",
+      "rdfs:comment": "Type or category of marking on a jewelry item. Common values: logo, hallmark, stamp, engraving, laserEngraving.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:StructuredValue"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:slotWidth",
+      "@type": "rdf:Property",
+      "rdfs:label": "slotWidth",
+      "rdfs:comment": "Width of a slot or groove in the ring (German: Schlitz). Typically measured in millimeters.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantityValue"
+        },
+        {
+          "@id": "schema:Distance"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:fairTradeCertified",
+      "@type": "rdf:Property",
+      "rdfs:label": "fairTradeCertified",
+      "rdfs:comment": "Indicates whether the precious metal used in the product is Fairtrade certified. Fairtrade certification ensures ethical sourcing, fair wages, and environmental standards in mining operations.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        },
+        {
+          "@id": "xsd:boolean"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:fairTradeRegistration",
+      "@type": "rdf:Property",
+      "rdfs:label": "fairTradeRegistration",
+      "rdfs:comment": "Fairtrade registration or certification number for the precious metal used in the product.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:surfaceFinish",
+      "@type": "rdf:Property",
+      "rdfs:label": "surfaceFinish",
+      "rdfs:comment": "Surface finish or treatment applied to the jewelry item. Common values: polished (German: poliert), matte (matt), brushed (gebürstet), hammered (gehämmert), satin, mirror.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:ringSize",
+      "@type": "rdf:Property",
+      "rdfs:label": "ringSize",
+      "rdfs:comment": "Ring size using a standard sizing system. Should be specified together with ringSizeSystem to indicate which sizing convention is used (e.g., '50' in D/EU system).",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:Number"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:ringSizeSystem",
+      "@type": "rdf:Property",
+      "rdfs:label": "ringSizeSystem",
+      "rdfs:comment": "Ring sizing system or standard used. Common values: D/EU (German/European), US, UK, ISO 8653 (international standard), JP (Japanese), FR (French).",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:eclassCode",
+      "@type": "rdf:Property",
+      "rdfs:label": "eclassCode",
+      "rdfs:comment": "ECLASS material classification code. ECLASS is an ISO-compliant, property-based classification system for materials and products used in e-commerce and industry.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:materialComposition",
+      "@type": "rdf:Property",
+      "rdfs:label": "materialComposition",
+      "rdfs:comment": "Structured information about the material composition of the product, including alloy details, base metals, and certifications.",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Product"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:StructuredValue"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:TortugaDeOroGoldRingCredential",
+      "@type": "rdfs:Class",
+      "rdfs:label": "TortugaDeOroGoldRingCredential",
+      "rdfs:comment": "A verifiable credential for Tortuga de Oro gold ring products, containing structured product information and certification data."
+    },
+    {
+      "@id": "tdo:karatValue",
+      "@type": "rdf:Property",
+      "rdfs:label": "karatValue",
+      "rdfs:comment": "The karat value of a gold fineness standard (e.g., '24k', '18k', '14k'). Used as a descriptive property of GoldFineness enum values.",
+      "schema:domainIncludes": [
+        {
+          "@id": "tdo:GoldFineness"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:purityPercentage",
+      "@type": "rdf:Property",
+      "rdfs:label": "purityPercentage",
+      "rdfs:comment": "The percentage of pure gold in a gold fineness standard (e.g., 99.9, 75.0, 58.5). Used as a descriptive property of GoldFineness enum values.",
+      "schema:domainIncludes": [
+        {
+          "@id": "tdo:GoldFineness"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "xsd:decimal"
+        }
+      ]
+    },
+    {
+      "@id": "tdo:GoldFineness",
+      "@type": "rdfs:Class",
+      "rdfs:label": "GoldFineness",
+      "rdfs:comment": "Enumeration of standard gold fineness values according to the millesimal fineness system used in hallmarking. Each value represents parts per thousand of pure gold content."
+    },
+    {
+      "@id": "tdo:GoldFineness-999",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "24 karat gold, 99.9% pure gold. The highest purity gold commonly used in jewelry, also known as fine gold."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "999 Gold (24k)"
+      },
+      "skos:prefLabel": "999",
+      "tdo:karatValue": "24k",
+      "tdo:purityPercentage": 99.9,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-999"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-958",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "23 karat gold, 95.8% pure gold. Commonly used in high-purity jewelry markets."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "958 Gold (23k)"
+      },
+      "skos:prefLabel": "958",
+      "tdo:karatValue": "23k",
+      "tdo:purityPercentage": 95.8,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-958"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-916",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "22 karat gold, 91.6% pure gold. Traditional gold standard in many countries, particularly popular in India and the Middle East."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "916 Gold (22k)"
+      },
+      "skos:prefLabel": "916",
+      "tdo:karatValue": "22k",
+      "tdo:purityPercentage": 91.6,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-916"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-750",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "18 karat gold, 75% pure gold. The most common standard for fine jewelry in Europe and worldwide. Provides an excellent balance between purity, durability, and color intensity."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "750 Gold (18k)"
+      },
+      "skos:prefLabel": "750",
+      "tdo:karatValue": "18k",
+      "tdo:purityPercentage": 75.0,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-750"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-585",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "14 karat gold, 58.5% pure gold. Very popular in the United States and offers good durability for everyday wear jewelry."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "585 Gold (14k)"
+      },
+      "skos:prefLabel": "585",
+      "tdo:karatValue": "14k",
+      "tdo:purityPercentage": 58.5,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-585"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-417",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "10 karat gold, 41.7% pure gold. The minimum gold content required to be legally called gold in the United States."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "417 Gold (10k)"
+      },
+      "skos:prefLabel": "417",
+      "tdo:karatValue": "10k",
+      "tdo:purityPercentage": 41.7,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-417"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-375",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "9 karat gold, 37.5% pure gold. The minimum gold content standard in the United Kingdom and other Commonwealth countries."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "375 Gold (9k)"
+      },
+      "skos:prefLabel": "375",
+      "tdo:karatValue": "9k",
+      "tdo:purityPercentage": 37.5,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-375"
+      }
+    },
+    {
+      "@id": "tdo:GoldFineness-333",
+      "@type": "tdo:GoldFineness",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "8 karat gold, 33.3% pure gold. Used in some markets, particularly in Germany and other European countries."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "333 Gold (8k)"
+      },
+      "skos:prefLabel": "333",
+      "tdo:karatValue": "8k",
+      "tdo:purityPercentage": 33.3,
+      "owl:sameAs": {
+        "@id": "https://european-epc-competence-center.github.io/jsonld-context/context/tdo/voc.jsonld#GoldFineness-333"
+      }
+    }
+  ]
+}
