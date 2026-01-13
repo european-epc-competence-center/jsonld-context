@@ -1,7 +1,6 @@
 {
   "@context": {
     "@version": 1.1,
-    "@protected": true,
     
     "TemplateRenderMethod": "https://w3id.org/vc/render-method#TemplateRenderMethod",
     "OpenAttestationEmbeddedRenderer": "https://w3id.org/vc/render-method#OpenAttestationEmbeddedRenderer",
