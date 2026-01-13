@@ -1,6 +1,7 @@
 {
   "@context": {
     "@version": 1.1,
+    "@protected": true,
     
     "TemplateRenderMethod": "https://w3id.org/vc/render-method#TemplateRenderMethod",
     "OpenAttestationEmbeddedRenderer": "https://w3id.org/vc/render-method#OpenAttestationEmbeddedRenderer",
@@ -18,16 +19,6 @@
     
     "template": {
       "@id": "https://w3id.org/vc/render-method#template"
-    },
-    
-    "mediaType": {
-      "@id": "https://schema.org/encodingFormat",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    
-    "digestMultibase": {
-      "@id": "https://w3id.org/security#digestMultibase",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     
     "rendererName": {
