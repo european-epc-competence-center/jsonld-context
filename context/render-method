@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    
+    "id": "@id",
+    "type": "@type",
+    
+    "renderMethod": {
+      "@id": "https://w3id.org/vc/render-method#renderMethod",
+      "@context": {
+        "@version": 1.1,
+        "@protected": true,
+        
+        "id": "@id",
+        "type": "@type",
+        
+        "TemplateRenderMethod": "https://w3id.org/vc/render-method#TemplateRenderMethod",
+        "OpenAttestationEmbeddedRenderer": "https://w3id.org/vc/render-method#OpenAttestationEmbeddedRenderer",
+        
+        "renderSuite": {
+          "@id": "https://w3id.org/vc/render-method#renderSuite",
+          "@type": "@id"
+        },
+        
+        "name": {
+          "@id": "https://schema.org/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        
+        "description": {
+          "@id": "https://schema.org/description",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        
+        "renderProperty": {
+          "@id": "https://w3id.org/vc/render-method#renderProperty",
+          "@type": "http://www.w3.org/2001/XMLSchema#string",
+          "@container": "@list"
+        },
+        
+        "template": {
+          "@id": "https://w3id.org/vc/render-method#template",
+          "@context": {
+            "@version": 1.1,
+            "@protected": true,
+            
+            "id": "@id",
+            "type": "@type",
+            
+            "mediaType": {
+              "@id": "https://schema.org/encodingFormat",
+              "@type": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            
+            "digestMultibase": {
+              "@id": "https://w3id.org/security#digestMultibase",
+              "@type": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        
+        "digestMultibase": {
+          "@id": "https://w3id.org/security#digestMultibase",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        
+        "rendererName": {
+          "@id": "https://w3id.org/vc/render-method#rendererName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      }
+    }
+  }
+}
