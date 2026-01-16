@@ -110,11 +110,9 @@
     {{/credentialSubject/epcis/eventTime}} {{#/credentialSubject/epcis/eventTimeZoneOffset}}({{/credentialSubject/epcis/eventTimeZoneOffset}}){{//credentialSubject/epcis/eventTimeZoneOffset}}
   </text>
 
-  <!-- Event ID -->
-  {{#/credentialSubject/epcis/eventID}}
-  <text x="30" y="100" style="font: bold 13px sans-serif; fill: #333;">Event ID:</text>
-  <text x="100" y="100" style="font: 11px monospace; fill: #0057b8;">{{/credentialSubject/epcis/eventID}}</text>
-  {{//credentialSubject/epcis/eventID}}
+  <!-- Subject -->
+  <text x="30" y="100" style="font: bold 13px sans-serif; fill: #333;">Subject:</text>
+  <text x="100" y="100" style="font: 11px monospace; fill: #0057b8;">{{/credentialSubject/id}}</text>
 
   <!-- Extends Credential -->
   <text x="30" y="120" style="font: bold 13px sans-serif; fill: #333;">Extends:</text>
